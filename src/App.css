@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+  font-family: "Ubuntu";
+}
+body {
+  min-height: 100vh;
+  background-color: #F8ECFF !important;
+}
+button {
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  min-width: 100px;
+  text-transform: capitalize;
+  border: none;
+  border-radius: 32px;
+  cursor: pointer;
+}
+
+
+/* Navigation Section */
+nav {
+  position: fixed;
+  width: 100vw;
+  padding: 0px 5%;
+  margin: 0px;
+  box-sizing: border-box;
+  background: #F8ECFF;
+  height: 70px;
+  box-shadow: 0px 0px 7px #ebdff1;
+}
+nav img {
+  width: 170px;
+}
+
+
+.nav_content p {
+  margin: 0px;
+  color: #600062;
+  font-size: 1.2rem;
+}
+/* Ends */
+
+/* Cover JS */
+.gamesphere_cover {
+  background-color: #F8ECFF;
+  font-size: 16px;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  padding: 0px 5%;
+  margin: 0px;
+  box-sizing: border-box;
+}
+.gamesphere_cover h1 {
+  color: #600062;
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1;
+}
+.gamesphere_cover button,
+.nav_connect button,
+.add_powerup {
+  background-color: #FC80FF;
+  text-transform: capitalize;
+  color: #1A003A;
+  font-weight: 500;
+  border: none;
+  border-radius: 32px;
+}
+.header_image {
+  width: 550px;
+  height: 500px;
+}
+.header_image img {
+  width: 100%;
+}
+
+
+/* CARD JS */
+.card_container {
+  border: 2px solid #696868;
+  border-radius: 22px;
+  width: 300px;
+  height: 530px;
+  padding: 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card_image {
+  box-shadow: 0px 0px 5px #888686;
+  width: 100%;
+  height: 75%;
+  overflow: hidden;
+  border-radius: 16px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+.card_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card_details {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.card_details h3 {
+  font-size: 1.3rem;
+}
+.card_details p {
+  color: #600062;
+}
+.card_details button {
+  background-color: #600062;
+  color: #fff;
+  text-transform: capitalize;
+  border-radius: 60px;
+}
+.card_details button.sold_nft {
+  background-color: #9D9D9D;
+}
+
+
+/* ADD JS */
+.header_text {
+  color: #600062;
+  width: 100%;
+  text-align: center !important;
+}
+.powerup_img_file {
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #d3d2d2;
+  color: #fff;
+  width: 150px;
+  margin: 20px auto 0px auto;
+  margin-bottom: 66px;
+  height: 150px;
+}
+.powerup_img_file input {
+  display: none;
+}
+.powerup_img_file label {
+  margin: 0px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.powerup_img_file label .bi-plus {
+  display: block;
+  font-size: 3rem;
+}
+
+.upload_powerup_form input {
+  height: 50px !important;
+  padding-left: 10px !important;
+}
+
+.close_btn {
+  border-radius: 8px;
+  color: #600062;
+  border-radius: 8px;
+  background-color: #F8ECFF;
+  border: thin solid #600062;
+}
+.upload_powerup {
+  border-radius: 8px;
+  color: #F8ECFF;
+  border-radius: 8px;
+  background-color: #600062;
+  border: thin solid #600062;
+}
+.upload_powerup:disabled {
+  background-color: #6000628e;
+  border: thin solid #6000628e;
+}
+
+.modal_footer {
+  text-align: center;
+}
+/* Marketplace Section */
+.marketplace {
+  padding-top: 100px;
+}
+
+.search_bar {
+  height: 50px;
+  margin: 0px;
+  border-radius: 32px;
+  border: thin solid #600062;
+  width: 87%;
+}
+.search_bar input {
+  width: 90%;
+  height: 100%;
+  border: none;
+  border-radius: inherit;
+  outline: none;
+  background: none;
+  padding-left: 10px;
+}
+.bi-search {
+  cursor: pointer;
+}

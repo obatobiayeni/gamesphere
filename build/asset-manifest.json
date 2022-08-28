@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/gamesphere/static/css/main.9494397f.chunk.css",
+    "main.js": "/gamesphere/static/js/main.a694e2bf.chunk.js",
+    "main.js.map": "/gamesphere/static/js/main.a694e2bf.chunk.js.map",
+    "runtime-main.js": "/gamesphere/static/js/runtime-main.66d946f2.js",
+    "runtime-main.js.map": "/gamesphere/static/js/runtime-main.66d946f2.js.map",
+    "static/css/2.43febad4.chunk.css": "/gamesphere/static/css/2.43febad4.chunk.css",
+    "static/js/2.0c8119b9.chunk.js": "/gamesphere/static/js/2.0c8119b9.chunk.js",
+    "static/js/2.0c8119b9.chunk.js.map": "/gamesphere/static/js/2.0c8119b9.chunk.js.map",
+    "static/js/3.2131ecdb.chunk.js": "/gamesphere/static/js/3.2131ecdb.chunk.js",
+    "static/js/3.2131ecdb.chunk.js.map": "/gamesphere/static/js/3.2131ecdb.chunk.js.map",
+    "index.html": "/gamesphere/index.html",
+    "static/css/2.43febad4.chunk.css.map": "/gamesphere/static/css/2.43febad4.chunk.css.map",
+    "static/css/main.9494397f.chunk.css.map": "/gamesphere/static/css/main.9494397f.chunk.css.map",
+    "static/js/2.0c8119b9.chunk.js.LICENSE.txt": "/gamesphere/static/js/2.0c8119b9.chunk.js.LICENSE.txt",
+    "static/media/Cards.27eef5ad.png": "/gamesphere/static/media/Cards.27eef5ad.png",
+    "static/media/bootstrap-icons.css": "/gamesphere/static/media/bootstrap-icons.c1d7432e.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.66d946f2.js",
+    "static/css/2.43febad4.chunk.css",
+    "static/js/2.0c8119b9.chunk.js",
+    "static/css/main.9494397f.chunk.css",
+    "static/js/main.a694e2bf.chunk.js"
+  ]
+}
