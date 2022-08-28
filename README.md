@@ -8,7 +8,7 @@ Gamesphere is an NFT market place for minting, buying and selling in-games power
 2. Buy minted powerups
 3. Resell purchased powerups at a given price
 
-[Click here to visit the live project](https://lypso1.github.io/vintage-jersey/)
+[Click here to visit the live project](https://obatobiayeni.github.io/gamesphere/)
 
 ## :man_technologist: Languages/tools used for this project includes
 
