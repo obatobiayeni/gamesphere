@@ -1,10 +1,12 @@
 <!-- ABOUT THE PROJECT -->
-# <h1 align="center">Vintage Jersey</h1>
+# <h1 align="center">Gamesphere</h1>
 ```
 ```
 ## About The Project
-Vintage Jersey is an NFT market place for buying and selling vintage jersey as NFT. It is a platform for all football lovers to display their love for their club/country.
-This project was built to give users the ability to show their love for vintage jersey and creating beautiful NFTs with their vintage jersey.
+Gamesphere is an NFT market place for minting, buying and selling in-games powerups. It is a platform for game lovers to connect and trade their favourite in-game items. Users are able to
+1. Mint powerups
+2. Buy minted powerups
+3. Resell purchased powerups at a given price
 
 [Click here to visit the live project](https://lypso1.github.io/vintage-jersey/)
 
@@ -30,7 +32,7 @@ Step-by-step guide to running this NFT minter locally;
 
 1. Clone the repo
    ```sh
-   git clone [Vintage Jersey NFT Marketplace](https://github.com/lypso1/vintage-jersey.git)
+   git clone [Gamesphere](https://github.com/obatobiayeni/gamesphere.git)
    ```
 2. Install NPM packages
    ```sh
