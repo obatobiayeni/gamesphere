@@ -29,11 +29,11 @@ contract GamesphereNFT is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
     function createToken(string memory uri, uint256 _tokenId) public returns (uint256) {
         // comment out the require statements when testing the smart contract
         require(_tokenId == powerups[_tokenId].tokenId , "Powerup with this token ID not found");    // token ID must exist before it can be minted
-        require(msg.sender == powerups[_tokenId].owner, "Only owner can mint this NFT");  // only the owner of a jersey can mint the jersey
+        require(msg.sender == powerups[_tokenId].owner, "Only owner can mint this NFT");  // only the owner of a powerup can mint the powerup
 
         uint256 tokenId = powerups[_tokenId].tokenId;
 
-        _safeMint(msg.sender, tokenId); //minting the jersey
+        _safeMint(msg.sender, tokenId); //mint the powerup to the owner's account
         _setTokenURI(tokenId, uri); //creating a url using the token ID and the uri provided
 
         return tokenId;
@@ -67,7 +67,7 @@ contract GamesphereNFT is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
             _isAvailable
         );
 
-        createToken(_uri, _tokenId);    //minting the jersey as soon as it is uploaded by calling the createToken function
+        createToken(_uri, _tokenId);    //minting the powerup during upload
         
         length ++;
         count.increment();
