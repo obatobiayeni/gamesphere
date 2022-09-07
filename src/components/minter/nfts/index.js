@@ -11,8 +11,7 @@ import {
   getNfts,
   getPowerup,
   resellNft,
-  createNft,
-  fetchNftContractOwner,
+  createNft
 } from "../../../utils/minter";
 import { Row } from "react-bootstrap";
 
@@ -20,7 +19,6 @@ const NftList = ({ minterContract }) => {
   const { performActions, address } = useContractKit();
   const [nfts, setNfts] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [nftOwner, setNftOwner] = useState(null);
 
   const getNFTAssets = useCallback(async () => {
     try {
@@ -94,22 +92,15 @@ const NftList = ({ minterContract }) => {
     }
   }
 
-  const fetchContractOwner = useCallback(async (minterContract) => {
-    // get the address that deployed the NFT contract
-    const _address = await fetchNftContractOwner(minterContract);
-    setNftOwner(_address);
-  }, []);
-
   useEffect(() => {
     try {
       if (address && minterContract) {
         getNFTAssets();
-        fetchContractOwner(minterContract);
       }
     } catch (error) {
       console.log({ error });
     }
-  }, [minterContract, address, getNFTAssets, fetchContractOwner]);
+  }, [minterContract, address, getNFTAssets]);
 
   if (address) {
     return (

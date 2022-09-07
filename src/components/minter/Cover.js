@@ -15,7 +15,7 @@ const Cover = ({ connect }) => {
         </div>
 
         <div className="header_image">
-          <img src={image}/>
+          <img src={image} alt="Cover"/>
         </div>
 
       </div>
