@@ -19,9 +19,7 @@ const makeFileObjects = (file) => {
 
 const formattedName = (name) => {
   let file_name;
-
   const trim_name = name.trim() // removes extra whitespaces
-
   if(trim_name.includes(" ")) {
     file_name = trim_name.replaceAll(" ", "%20")
     
