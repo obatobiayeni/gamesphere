@@ -3,7 +3,7 @@ import { ethers } from "ethers";
 
 // initialize IPFS
 const getAccessToken = () => {
-  return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDAyZDE2OWM0Y0VhMDREQTNGMjQ4RDg5MDUwNjkxNzk2NWJkZjUxN2MiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NjI0MTU5OTM5NjQsIm5hbWUiOiJ3aW5lcnkifQ.dV9Ojvo_yX4QS9lYKcng-B1Vfu1vwmKIXyad_xcTNH8";
+  return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDQ1NzNjNjY2ODNFMEE1MTdkMTNmMUJmZDYwMzkzZDUyMWM2NGRDYzQiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NjA5MTc4NDM4NzQsIm5hbWUiOiJjZWxvMjAxIn0.YlJ4cJ6i3sZ3nNoFArgzasDPmEhZSmzHqeOFTVl3BTw";
 }
 const makeStorageClient = () => {
   return new Web3Storage({ token: getAccessToken() })
@@ -18,12 +18,14 @@ const makeFileObjects = (file) => {
 }
 
 const formattedName = (name) => {
+  console.log(name)
   let file_name;
   const trim_name = name.trim() // removes extra whitespaces
 
   if(trim_name.includes(" ")) {
     file_name = trim_name.replaceAll(" ", "%20")
     
+    console.log(file_name)
     return file_name
   }
   else return trim_name
@@ -51,8 +53,10 @@ export const createNft = async (
       price,
       owner: defaultAccount,
     };
+    console.log(data)
 
     const files = makeFileObjects(data)
+    console.log(files)
 
     try {
       // save NFT metadata to IPFS
@@ -60,6 +64,7 @@ export const createNft = async (
 
       // IPFS url for uploaded metadata
       const url = `https://${file_cid}.ipfs.w3s.link/${file_name}.json`;
+      console.log(url)
       const _price = ethers.utils.parseUnits(String(price), "ether");
 
       // upload the NFT, mint the NFT and save the IPFS url to the blockchain
