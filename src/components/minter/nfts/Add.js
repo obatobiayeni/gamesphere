@@ -71,7 +71,7 @@ const AddNfts = ({ save, address }) => {
               type="text"
               placeholder="Name"
               onChange={(e) => {
-                setName(e.target.value);
+                setName(e.target.value.trim());
               }}
             />
 

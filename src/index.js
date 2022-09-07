@@ -24,8 +24,8 @@ ReactDOM.render(
         chainId: 44787,
       }}
       dapp={{
-        name: "Vintage Jersey NFT Marketplace",
-        description: "Showcasing vinatge jersey NFTs",
+        name: "Gamesphere NFT Marketplace",
+        description: "Showcasing gamesphere powerup NFTs",
       }}
     >
       <App />
