@@ -1,5 +1,4 @@
 import { useContractKit } from "@celo-tools/use-contractkit";
-import { useGamesphereContract } from "../../../hooks";
 import { Col, Modal, Form } from "react-bootstrap";
 import React, { useState } from "react";
 
@@ -37,7 +36,7 @@ const Nft = ({ nft, buyNft, data }) => {
     <Col key={tokenId} className="mb-5">
       <div className="card_container">
         <div className="card_image">
-          <img src={image} />
+          <img src={image} alt="Powerup"/>
         </div>
 
         <div className="card_details">

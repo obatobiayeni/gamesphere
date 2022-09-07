@@ -3,7 +3,7 @@ import { ethers } from "ethers";
 
 // initialize IPFS
 const getAccessToken = () => {
-  return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDQ1NzNjNjY2ODNFMEE1MTdkMTNmMUJmZDYwMzkzZDUyMWM2NGRDYzQiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NjA5MTc4NDM4NzQsIm5hbWUiOiJjZWxvMjAxIn0.YlJ4cJ6i3sZ3nNoFArgzasDPmEhZSmzHqeOFTVl3BTw";
+  return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDAyZDE2OWM0Y0VhMDREQTNGMjQ4RDg5MDUwNjkxNzk2NWJkZjUxN2MiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NjI0MTU5OTM5NjQsIm5hbWUiOiJ3aW5lcnkifQ.dV9Ojvo_yX4QS9lYKcng-B1Vfu1vwmKIXyad_xcTNH8";
 }
 const makeStorageClient = () => {
   return new Web3Storage({ token: getAccessToken() })
@@ -17,6 +17,21 @@ const makeFileObjects = (file) => {
   return files
 }
 
+const formattedName = (name) => {
+  let file_name;
+
+  const trim_name = name.trim() // removes extra whitespaces
+
+  if(trim_name.includes(" ")) {
+    file_name = trim_name.replaceAll(" ", "%20")
+    
+    return file_name
+  }
+  else return trim_name
+}
+
+
+
 // mint an NFT
 export const createNft = async (
   minterContract,
@@ -26,6 +41,9 @@ export const createNft = async (
   await performActions(async (kit) => {
     if (!name || !ipfsImage || !price) return;
     const { defaultAccount } = kit;
+
+    // format the user name input to get appropriate name
+    const file_name = formattedName(name);
 
     // convert NFT metadata to JSON format
     const data = {
@@ -42,7 +60,7 @@ export const createNft = async (
       const file_cid = await client.put(files);
 
       // IPFS url for uploaded metadata
-      const url = `https://${file_cid}.ipfs.w3s.link/${data.name}.json`;
+      const url = `https://${file_cid}.ipfs.w3s.link/${file_name}.json`;
       const _price = ethers.utils.parseUnits(String(price), "ether");
 
       // upload the NFT, mint the NFT and save the IPFS url to the blockchain
@@ -60,16 +78,14 @@ export const createNft = async (
 // function to upload a file to IPFS
 export const uploadToIpfs = async (e) => {
   const image = e.target.files;
+  const image_name = formattedName(image[0].name);
+  
   if (!image) return;
   try {
-    const image_cid = await client.put(image);
-    const image_res = await client.get(image_cid)
-    const image_file = await image_res.files()
-    
-    for (const file of image_file) {
-      const image_url = `https://${file.cid}.ipfs.w3s.link/`
-      return image_url
-    }
+    const image_cid = await client.put(image);    
+    const image_url = `https://${image_cid}.ipfs.w3s.link/${image_name}`
+
+    return image_url
   } catch (error) {
     console.log("Error uploading file: ", error);
   }
