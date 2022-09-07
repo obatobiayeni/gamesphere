@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/gamesphere/static/css/main.4ee622e4.chunk.css",
-    "main.js": "/gamesphere/static/js/main.8a98a51f.chunk.js",
-    "main.js.map": "/gamesphere/static/js/main.8a98a51f.chunk.js.map",
+    "main.js": "/gamesphere/static/js/main.480226b2.chunk.js",
+    "main.js.map": "/gamesphere/static/js/main.480226b2.chunk.js.map",
     "runtime-main.js": "/gamesphere/static/js/runtime-main.66d946f2.js",
     "runtime-main.js.map": "/gamesphere/static/js/runtime-main.66d946f2.js.map",
     "static/css/2.43febad4.chunk.css": "/gamesphere/static/css/2.43febad4.chunk.css",
-    "static/js/2.62c94d4f.chunk.js": "/gamesphere/static/js/2.62c94d4f.chunk.js",
-    "static/js/2.62c94d4f.chunk.js.map": "/gamesphere/static/js/2.62c94d4f.chunk.js.map",
+    "static/js/2.23f3073e.chunk.js": "/gamesphere/static/js/2.23f3073e.chunk.js",
+    "static/js/2.23f3073e.chunk.js.map": "/gamesphere/static/js/2.23f3073e.chunk.js.map",
     "static/js/3.2131ecdb.chunk.js": "/gamesphere/static/js/3.2131ecdb.chunk.js",
     "static/js/3.2131ecdb.chunk.js.map": "/gamesphere/static/js/3.2131ecdb.chunk.js.map",
     "index.html": "/gamesphere/index.html",
     "static/css/2.43febad4.chunk.css.map": "/gamesphere/static/css/2.43febad4.chunk.css.map",
     "static/css/main.4ee622e4.chunk.css.map": "/gamesphere/static/css/main.4ee622e4.chunk.css.map",
-    "static/js/2.62c94d4f.chunk.js.LICENSE.txt": "/gamesphere/static/js/2.62c94d4f.chunk.js.LICENSE.txt",
+    "static/js/2.23f3073e.chunk.js.LICENSE.txt": "/gamesphere/static/js/2.23f3073e.chunk.js.LICENSE.txt",
     "static/media/Cards.27eef5ad.png": "/gamesphere/static/media/Cards.27eef5ad.png",
     "static/media/bootstrap-icons.css": "/gamesphere/static/media/bootstrap-icons.c1d7432e.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.66d946f2.js",
     "static/css/2.43febad4.chunk.css",
-    "static/js/2.62c94d4f.chunk.js",
+    "static/js/2.23f3073e.chunk.js",
     "static/css/main.4ee622e4.chunk.css",
-    "static/js/main.8a98a51f.chunk.js"
+    "static/js/main.480226b2.chunk.js"
   ]
 }
